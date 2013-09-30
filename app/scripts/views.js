@@ -32,8 +32,15 @@ FullItemView = Backbone.View.extend({
     this.$el.append( this.template({item: this.model }) )
   }, 
 
-  checkoutLink: function(){
-    this.$el.append('<button type="button">b</button>')
-  } 
+
+}),
+
+AddStudentView = Backbone.View.extend({
+
+  template: _.template( $('#add-student-template').text() ),
+
+
+
+
 })
 

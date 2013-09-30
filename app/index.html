@@ -23,6 +23,8 @@
             <div class="headwrap">
                 <a href="#/about">About</a>
                 <a href="#/students">Students</a>
+                <a href="#/students/id">Add</a>
+
                 
    
             </div>
@@ -31,18 +33,22 @@
         <div class="container">
 
         <script type="text/template" id="grid-template">
-            <h1><%= item.get('firstName') %></h1>
+            <span class="name"><%= item.get('firstName') %></span>
             <img src=<%= item.get('image')%>>
         </script>
 
         <script type="text/template" id="full-template">
-            <h1><%= item.get('name') %></h1>
-            <h2>$<%= item.get('price') %></h2>
-            <p><%= item.get('description') %></p>
+            <h1><%= item.get(('firstName')+('lastName')) %></h1>
+            <div>$<%= item.get('image') %></div>
+            <h3><%= item.get('github') %></h3>
 
         </script>
 
-        <script type="text/template" id-""></script>
+        <script type="text/template" id"add-student-template">
+             <h1><%= item.get(('firstName')+('lastName')) %></h1>
+
+
+        </script >
 
 
 

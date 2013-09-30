@@ -7,7 +7,8 @@ AppRouter = Backbone.Router.extend({
 
   routes: {
     "about"     : "about",
-    "students"  : "showItems"
+    "students"  : "showStudents",
+    "students/:id"   : "addStudent"
   },
 
   about: function(){
@@ -15,18 +16,25 @@ AppRouter = Backbone.Router.extend({
     $('.container').html('')
   },
 
-  showItems: function(){
+  showStudents: function(){
     console.log('gonna show ALLLL the items.')
     $('.container').html('')
     this.items = new StudentsCollection()
     this.items.add(  data  )
   },
 
-  showItem: function(id) {
+  showStudent: function(id) {
     $('.container').html('')
     var itemToShow = this.items.get(id)
     new FullItemView({model: itemToShow})
     console.log('we should show an item with the id ', id)
+  },
+
+  addStudent: function(){
+    console.log('whats going on')
+    $('.container').html('')
+
+
   }
 
 })

@@ -29,11 +29,10 @@ header a {
 }
 
 img {
-    height: 150px;
-    width: 175px;
-    margin-bottom: 40px;
-    margin-top: 40px;
-    border-radius: 10px;
+height: 125px;
+width: 125px;
+border-radius: 50%;
+float: left;
 }
 
 .headwrap {
@@ -53,13 +52,11 @@ img {
 }
 
 .item-grid-unit {
-    width: 26%;
-    height: 300px;
+    height: 125px;
     border-radius: 4px;
     border: 1px solid #acacac;
     padding: 18px;
-    text-align: center;
-    display: inline-block;
+    display: block;
     margin: 10px 10px;
     font-size: 10px;
     background: white;
@@ -69,6 +66,13 @@ img {
 .item-grid-unit:hover {
     color: #000;
     background: #ececec;
+}
+
+.name {
+    font-size: 30px;
+    position: relative;
+    margin-left: 20px;
+    top: 40px;
 }
 
 .item-full {
@@ -81,6 +85,9 @@ img {
     margin-top: 70px;
 }
 
+.item-grid-unit h1 {
+    margin: 0 auto;
+}
 .item-full h1 {
     font-size: 50px;
     text-decoration: none;
