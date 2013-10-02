@@ -2,8 +2,6 @@ AppRouter = Backbone.Router.extend({
 
   initialize: function(){
     this.items = new StudentsCollection()
-    // this.items.add(data) 
-
   },
 
   routes: {
@@ -21,9 +19,14 @@ AppRouter = Backbone.Router.extend({
   showStudents: function(){
     console.log('gonna show ALLLL the items.')
     $('.container').html('')
-    this.items = new StudentsCollection()
     // hooking up data yo
-    this.items.fetch()
+    this.items.fetch({
+      success: function(items){
+        items.each(function(item){
+          new GridItemView( {model: item} )
+        })
+      }
+    })
 
   },
 
