@@ -7,5 +7,7 @@ StudentsCollection = Backbone.Collection.extend({
     })
   },
 
-  model: Student
+  model: Student,
+
+  url: 'http://0.0.0.0:3000/collections/students'
 })

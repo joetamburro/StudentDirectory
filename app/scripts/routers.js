@@ -2,13 +2,18 @@ AppRouter = Backbone.Router.extend({
 
   initialize: function(){
     this.items = new StudentsCollection()
-    this.items.add(  data  )
+    // this.items.add(data)
+    this.items.on('add', function(item){
+      new GridItemView( {model: item} )
+    })
+
   },
 
   routes: {
     "about"     : "about",
     "students"  : "showStudents",
-    "students/:id"   : "addStudent"
+    "students/:id" : "showStudent",
+    "add"       : "addStudent"
   },
 
   about: function(){
@@ -20,24 +25,33 @@ AppRouter = Backbone.Router.extend({
     console.log('gonna show ALLLL the items.')
     $('.container').html('')
     this.items = new StudentsCollection()
-    this.items.add(  data  )
+    // hooking up data yo
+    this.items.fetch()
+
   },
 
   showStudent: function(id) {
     $('.container').html('')
-    var itemToShow = this.items.get(id)
-    new FullItemView({model: itemToShow})
-    console.log('we should show an item with the id ', id)
+    this.items.fetch({
+      success: function(items){
+        var itemToShow = items.get(id)
+        new FullItemView({model: itemToShow})
+        console.log('we should show an item with the id ', id)
+      }
+    })
   },
+    // console.log('we should show an item with the id ', id)
+  
 
   addStudent: function(){
     console.log('whats going on')
     $('.container').html('')
 
-
   }
 
 })
+
+
 
 var router = new AppRouter()
 Backbone.history.start()

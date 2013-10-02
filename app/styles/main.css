@@ -25,7 +25,7 @@ header a {
     width: 33%;
     color: #fff;
     text-decoration: none;
-    padding: 77px; 
+    padding: 70px; 
 }
 
 img {
@@ -52,7 +52,7 @@ float: left;
 }
 
 .item-grid-unit {
-    height: 125px;
+    height:125px;
     border-radius: 4px;
     border: 1px solid #acacac;
     padding: 18px;
