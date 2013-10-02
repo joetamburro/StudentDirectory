@@ -2,10 +2,7 @@ AppRouter = Backbone.Router.extend({
 
   initialize: function(){
     this.items = new StudentsCollection()
-    // this.items.add(data)
-    this.items.on('add', function(item){
-      new GridItemView( {model: item} )
-    })
+    // this.items.add(data) 
 
   },
 
