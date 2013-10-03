@@ -2,12 +2,12 @@ GridItemView = Backbone.View.extend({
   
   template: _.template( $('#grid-template').text() ),
 
-  // tagName: 'a',
 
   className: 'item-grid-unit',
 
   events: {
-    "click .delete" : "destroy"
+    "click .delete" : "destroy",
+    
   },
 
   initialize: function(){
