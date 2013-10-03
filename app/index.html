@@ -37,7 +37,7 @@
         <!--  -->
         <script type="text/template" id="grid-template">
             <span class="name"><%= item.get('firstName') %></span>
-            <a href="#/students/:id"><img class="avatar" src=<%= item.get('image')%>></a>
+            <a href="#/students/<%= item.get('_id') %>"><img class="avatar" src=<%= item.get('image')%>></a>
             <button class="delete">DELETE</button>
             <button>EDIT</button>
         </script>
