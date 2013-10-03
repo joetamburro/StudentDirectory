@@ -2,9 +2,13 @@ GridItemView = Backbone.View.extend({
   
   template: _.template( $('#grid-template').text() ),
 
-  tagName: 'a',
+  // tagName: 'a',
 
   className: 'item-grid-unit',
+
+  events: {
+    "click .delete" : "destroy"
+  },
 
   initialize: function(){
     $('.container').append(this.el)
@@ -14,6 +18,12 @@ GridItemView = Backbone.View.extend({
   render: function(){
     this.$el.attr('href', "#/students/"+ this.model.get('_id') )
     this.$el.append( this.template({item: this.model }) )
+  },
+
+  destroy: function(){
+    console.log('deleting a student!');
+    // this.model.destroy()
+    this.remove()
   }
 }),
 
@@ -43,8 +53,6 @@ AddStudentView = Backbone.View.extend({
   template: _.template( $('#add-student-template').html() ),
 
   className: 'add-student',
-
-  tagName: 'div',
 
   initialize: function(){
     $('.container').append(this.el)

@@ -28,20 +28,35 @@ header a {
     text-decoration: none;
 }
 
+button {
+    margin-right: 15px;
+    float: right;
+    width: 200px;
+    height: 35px;
+    margin-top: 22px;
+}
+
 img {
-    height: 125px;
-    width: 125px;
+    height: 70px;
+    width: 70px;
     border-radius: 50%;
     float: left;
+    margin-top: 3px;
+    margin-left: 10px;    
 }
 
-input {
-    
-}
-
-#save-button {
+input.input-field {
+    margin: 0 auto;
+    width: 150px;
     display: block;
-    width: 120px;
+}
+
+.save-button {
+    display: block;
+    width: 160px;
+    margin: 0 auto;
+    margin-top: 15px;
+    float: center;
 }
 
 .headwrap {
@@ -61,10 +76,9 @@ input {
 }
 
 .item-grid-unit {
-    height:125px;
+    height:75px;
     border-radius: 4px;
     border: 1px solid #acacac;
-    padding: 18px;
     display: block;
     margin: 10px 10px;
     font-size: 10px;
@@ -81,7 +95,7 @@ input {
     font-size: 30px;
     position: relative;
     margin-left: 20px;
-    top: 40px;
+    top: 20px;
 }
 
 .item-full {
