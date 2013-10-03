@@ -46,7 +46,7 @@ AppRouter = Backbone.Router.extend({
   addStudent: function(){
     console.log('whats going on')
     $('.container').html('')
-
+    new AddStudentView()
   }
 
 })

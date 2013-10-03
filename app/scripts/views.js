@@ -40,11 +40,21 @@ FullItemView = Backbone.View.extend({
 
 AddStudentView = Backbone.View.extend({
 
-  template: _.template( $('#add-student-template').text() ),
+  template: _.template( $('#add-student-template').html() ),
 
-  initaliaze: function (){
+  className: 'add-student',
 
-  }
+  tagName: 'div',
+
+  initialize: function(){
+    $('.container').append(this.el)
+    this.render()
+  },
+
+  render: function() {
+    this.$el.append( this.template() )
+  },
+
 
 
 })

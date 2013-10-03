@@ -21,18 +21,27 @@ header {
 }
 
 header a {
-    margin-top: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
     width: 33%;
     color: #fff;
     text-decoration: none;
-    padding: 70px; 
 }
 
 img {
-height: 125px;
-width: 125px;
-border-radius: 50%;
-float: left;
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    float: left;
+}
+
+input {
+    
+}
+
+#save-button {
+    display: block;
+    width: 120px;
 }
 
 .headwrap {
