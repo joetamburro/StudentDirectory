@@ -45,10 +45,11 @@
 
 
         <script type="text/template" id="edit-student-template">
-            <h1>EDIT ME</h1>
-
-
-
+            <input value="<%= item.get('firstName')%>">    <input value="<%= item.get('lastName') %>">
+            <img id="full-avatar" src=<%= item.get('image') %>>
+            <input value="<%= item.get('phone') %>">
+            <input value="<%= item.get('email') %>">
+            <input value="<%= item.get('github') %>">
 
         </script>
 

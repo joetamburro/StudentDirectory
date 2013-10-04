@@ -22,7 +22,7 @@ AppRouter = Backbone.Router.extend({
     console.log('gonna show ALLLL the items.')
     $('.container').html('')
     // hooking up data yo
-    this.items.fetch({
+      this.items.fetch({
       success: function(items){
         items.each(function(item){
           new GridItemView( {model: item} )
@@ -51,13 +51,21 @@ AppRouter = Backbone.Router.extend({
     new AddStudentView()
   },
 
-  editStudent: function(){
+  editStudent: function(id){
     $('.container').html('')
-    new EditStudentView()
-  }
+      if (this.items.length === 0) {
+        this.items.fetch({
+          success: function(collection){
+            var itemToShow = collection.get(id);
+            new EditStudentView({model: itemToShow});
+          }
+        }) 
+      } else {
+          var itemToShow = this.items.get(id)
+          new EditStudentView({model: itemToShow})
+        }
+  },
 
-
-  
 
 })
 

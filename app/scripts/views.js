@@ -52,9 +52,10 @@ FullItemView = Backbone.View.extend({
 
 EditStudentView = Backbone.View.extend({
 
-  template: _.template( $('#edit-student-template').html() ),
+  template: _.template( $('#edit-student-template').text() ),
 
   className: 'edit-student',
+
 
   initialize: function(){
     $('.container').append(this.el)
@@ -63,9 +64,13 @@ EditStudentView = Backbone.View.extend({
 
   render: function(){
     console.log('hey man where you at')
-    this.$el.attr('href', "#/students/:id/edit")
-    this.$el.append(this.template)
+    this.$el.append(this.template({item: this.model}))
   },
+
+  // save: function(){
+  //   this.model.set('firstName', $('#first-name-edit').val() )
+  //   this.model.save()
+  // },
 
 
 }),
