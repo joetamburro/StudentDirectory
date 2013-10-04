@@ -51,12 +51,47 @@ input.input-field {
     display: block;
 }
 
+.fullH1 {
+    display: inline-block;
+    color: white;
+}
+
+#github {
+    color: white;
+}
+
+#email {
+    color: white;
+    margin-bottom: 0px;
+}
+
+#phone {
+    color: white;
+    margin-bottom: 0px;
+}
+
+#edit {
+    position: relative;
+    bottom: 45px;
+    right: -5px;
+    }
+
 .save-button {
     display: block;
     width: 160px;
     margin: 0 auto;
     margin-top: 15px;
     float: center;
+}
+
+#full-avatar {
+    float: right;
+    height: 175px;
+    width: 175px;
+    border-radius: 5px;
+    position: relative;
+    right: 25px;
+    top: 15px;
 }
 
 .headwrap {
@@ -100,7 +135,7 @@ input.input-field {
 
 .item-full {
     width: 650px;
-    min-height: 300px;
+    min-height: 280px;
     margin: 0 auto;
     border-radius: 4px;
     border: 1px solid #acacac;
@@ -108,11 +143,15 @@ input.input-field {
     margin-top: 70px;
 }
 
-.item-grid-unit h1 {
-    margin: 0 auto;
-}
+
 .item-full h1 {
     font-size: 50px;
     text-decoration: none;
+    position: relative;
+    top: -28px;
+}
+
+.item-grid-unit h1 {
+    margin: 0 auto;
 }
 

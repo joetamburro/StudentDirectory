@@ -39,13 +39,30 @@
             <span class="name"><%= item.get('firstName') %></span>
             <a href="#/students/<%= item.get('_id') %>"><img class="avatar" src=<%= item.get('image')%>></a>
             <button class="delete">DELETE</button>
-            <button>EDIT</button>
+            
         </script>
 
+
+
+        <script type="text/template" id="edit-student-template">
+            <h1>EDIT ME</h1>
+
+
+
+
+        </script>
+
+
+
+
         <script type="text/template" id="full-template">
-            <h1><%= item.get('firstName') %></h1>
-            <img src=<%= item.get('image') %>>
-            <h3><%= item.get('github') %></h3>
+            <h1 class="fullH1"><%= item.get('firstName') %></h1>    <h1 class="fullH1"><%= item.get('lastName') %></h1>
+            <img id="full-avatar" src=<%= item.get('image') %>>
+            <h4 id="phone"><%= item.get('phone') %></h4>
+            <h3 id="email"><%= item.get('email') %></h3>
+            <h3 id="github"><%= item.get('github') %></h3>
+            <button id="edit">edit</button>
+        
 
         </script>
         

@@ -10,6 +10,7 @@ AppRouter = Backbone.Router.extend({
     "students"      : "showStudents",
     "students/:id"  : "showStudent",
     "add"           : "addStudent",
+    ":id/edit" : "editStudent"
   },
 
   about: function(){

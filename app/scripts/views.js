@@ -7,7 +7,7 @@ GridItemView = Backbone.View.extend({
 
   events: {
     "click .delete" : "destroy",
-    
+
   },
 
   initialize: function(){
@@ -24,7 +24,10 @@ GridItemView = Backbone.View.extend({
     console.log('deleting a student!');
     // this.model.destroy()
     this.remove()
-  }
+  },
+
+
+
 }),
 
 FullItemView = Backbone.View.extend({
@@ -32,6 +35,10 @@ FullItemView = Backbone.View.extend({
   template: _.template( $('#full-template').text() ),
 
   className: 'item-full',
+
+  events: {
+    "click .edit"   : "edit", 
+  },
 
 
   initialize: function(){
@@ -41,9 +48,15 @@ FullItemView = Backbone.View.extend({
 
   render: function(){
     console.log(this.model)
+    this.$el.attr('href', "#/students/:id/edit")
     this.$el.append( this.template({item: this.model }) )
 
   }, 
+
+  edit: function(){
+    new EditStudentView()
+
+  }
 
 
 }),
@@ -64,6 +77,24 @@ AddStudentView = Backbone.View.extend({
   },
 
 
+
+})
+
+EditStudentView = Backbone.View.extend({
+
+  template: _.template( $('#edit-student-template').html() ),
+
+  className: 'edit-student',
+
+  initialize: function(){
+    $('.container').html('')
+    $('.container').append(this.el)
+    this.render()
+  },
+
+  render: function(){
+    this.$el.append( this.template({ item: this.model }) )
+  },
 
 })
 
