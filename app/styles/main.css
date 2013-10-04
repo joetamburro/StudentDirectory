@@ -70,9 +70,10 @@ input.input-field {
     margin-bottom: 0px;
 }
 
-#edit {
+/*edit button*/
+.edit {
     position: relative;
-    bottom: 45px;
+    bottom: 65px;
     right: -5px;
     }
 

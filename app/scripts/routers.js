@@ -5,12 +5,12 @@ AppRouter = Backbone.Router.extend({
   },
 
   routes: {
-    ""              : "showStudents", 
-    "about"         : "about",
-    "students"      : "showStudents",
-    "students/:id"  : "showStudent",
-    "add"           : "addStudent",
-    ":id/edit" : "editStudent"
+    ""                  : "showStudents", 
+    "about"             : "about",
+    "students"          : "showStudents",
+    "students/:id"      : "showStudent",
+    "add"               : "addStudent",
+    "students/:id/edit" : "editStudent"
   },
 
   about: function(){
@@ -50,6 +50,13 @@ AppRouter = Backbone.Router.extend({
     $('.container').html('')
     new AddStudentView()
   },
+
+  editStudent: function(){
+    $('.container').html('')
+    new EditStudentView()
+  }
+
+
   
 
 })
