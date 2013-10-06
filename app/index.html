@@ -50,12 +50,13 @@
 
         <script type="text/template" id="edit-student-template">
            
-            <input id="fullH1" value="<%= item.get('firstName')%>">    <input value="<%= item.get('lastName') %>">
+            <input id="firstName-input" value="<%= item.get('firstName')%>">    
+            <input id="lastName-Input" value="<%= item.get('lastName') %>">
             <img id="full-avatar" src=<%= item.get('image') %>>
-            <input value="<%= item.get('phone') %>">
-            <input value="<%= item.get('email') %>">
-            <input value="<%= item.get('github') %>">
-            <button class="save">save</button>
+            <input id="phone-input" value="<%= item.get('phone') %>">
+            <input id="email-input" value="<%= item.get('email') %>">
+            <input id="github-input" value="<%= item.get('github') %>">
+            <button class="save-edit-button" type="submit">save</button>
 
         </script>
 
