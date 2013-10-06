@@ -74,15 +74,21 @@ EditStudentView = Backbone.View.extend({
   saveStudent: function(){
     this.model.set({
       "firstName": this.$el.find('#firstName-input').val(),
-      "lasttName": this.$el.find('#lastName-input').val(),
+      "lastName": this.$el.find('#lastName-input').val(),
       "phone": this.$el.find('#phone-input').val(),
       "email": this.$el.find('#email-input').val(),
       "github": this.$el.find('#github-input').val()
     }),
-
-    this.model.save()
-
+    
+    this.model.save(function(){
+      $('.save-edit-button').click(function(){
+        alert('saved')
+      })
+    })
+    
   },
+
+
 
 }),
 

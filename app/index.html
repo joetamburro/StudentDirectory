@@ -49,14 +49,26 @@
 
 
         <script type="text/template" id="edit-student-template">
-           
-            <input id="firstName-input" value="<%= item.get('firstName')%>">    
-            <input id="lastName-Input" value="<%= item.get('lastName') %>">
-            <img id="full-avatar" src=<%= item.get('image') %>>
+            <span>First Name</span>
+            <input id="firstName-input" value="<%= item.get('firstName')%>">
+
+            <span>Last Name</span>
+            <input id="lastName-input" value="<%= item.get('lastName') %>">
+
+            <span>Phone #</span>
             <input id="phone-input" value="<%= item.get('phone') %>">
+
+            <span>Email Address</span>
             <input id="email-input" value="<%= item.get('email') %>">
+
+            <span>GitHub Link</span>
             <input id="github-input" value="<%= item.get('github') %>">
-            <button class="save-edit-button" type="submit">save</button>
+
+            <img id="full-avatar-edit" src=<%= item.get('image') %>>
+            
+            <span id="imageURL">Image URL</span>
+            <input id="full-avatar-url-input" value="<%= item.get('image') %>"></input>
+            <button class="save-edit-button">save</button>
 
         </script>
 

@@ -176,3 +176,31 @@ input.input-field {
     margin: 0 auto;
 }
 
+.edit-student span{
+    color: white;
+}
+
+#firstName-input, 
+#lastName-input,
+#phone-input,
+#email-input, 
+#github-input,
+#full-avatar-url-input {
+    display: block;
+    width: 250px;
+}
+.save-edit-button {
+    position: relative;
+    left: 175px;
+    bottom: 27px;
+    margin: 0 auto;
+}
+#full-avatar-edit {
+    float: right;
+    height: 175px;
+    width: 175px;
+    border-radius: 5px;
+    position: relative;
+    right: 25px;
+    bottom: 200px;
+}
