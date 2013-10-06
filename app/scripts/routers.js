@@ -6,7 +6,6 @@ AppRouter = Backbone.Router.extend({
 
   routes: {
     ""                  : "showStudents", 
-    "about"             : "about",
     "students"          : "showStudents",
     "students/:id"      : "showStudent",
     "add"               : "addStudent",
@@ -42,7 +41,7 @@ AppRouter = Backbone.Router.extend({
       }
     })
   },
-    // console.log('we should show an item with the id ', id)
+
   
 
   addStudent: function(){

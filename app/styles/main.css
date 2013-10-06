@@ -56,6 +56,10 @@ input.input-field {
     color: white;
 }
 
+#fullH1 {
+    display: inline-block;
+}
+
 #github {
     color: white;
 }
@@ -63,6 +67,12 @@ input.input-field {
 #email {
     color: white;
     margin-bottom: 0px;
+}
+
+.save {
+    position: relative;
+    bottom: -190px;
+    left: 185px;
 }
 
 #phone {
@@ -142,6 +152,16 @@ input.input-field {
     border: 1px solid #acacac;
     padding: 15px;
     margin-top: 70px;
+}
+
+.edit-student {
+    width: 650px;
+    min-height: 280px;
+    margin: 0 auto;
+    border-radius: 4px;
+    border: 1px solid #acacac;
+    padding: 15px;
+    margin-top: 70px; 
 }
 
 

@@ -22,7 +22,6 @@
         <header>
             <div class="headwrap">
                
-                <a href="#/about">About</a>
                 <a href="#/students">Students</a>
                 <a href="#/add">Add Student</a>  
 
@@ -42,7 +41,7 @@
             <a href="#/students/<%= item.get('_id') %>">
                 <img class="avatar" src=<%= item.get('image')%>>
             </a>
-            
+
             <button class="delete">DELETE</button>
             
         </script>
@@ -51,7 +50,7 @@
 
         <script type="text/template" id="edit-student-template">
            
-            <input value="<%= item.get('firstName')%>">    <input value="<%= item.get('lastName') %>">
+            <input id="fullH1" value="<%= item.get('firstName')%>">    <input value="<%= item.get('lastName') %>">
             <img id="full-avatar" src=<%= item.get('image') %>>
             <input value="<%= item.get('phone') %>">
             <input value="<%= item.get('email') %>">
