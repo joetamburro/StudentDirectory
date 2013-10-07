@@ -166,7 +166,6 @@ input.input-field {
 
 
 .item-full h1 {
-    font-size: 50px;
     text-decoration: none;
     position: relative;
     top: -28px;
@@ -187,7 +186,7 @@ input.input-field {
 #github-input,
 #full-avatar-url-input {
     display: block;
-    width: 250px;
+    width: 300px;
 }
 .save-edit-button {
     position: relative;

@@ -46,6 +46,16 @@
             
         </script>
 
+        <script type="text/template" id="full-template">
+            
+            <h1 class="fullH1"><%= item.get('firstName') %></h1>    <h1 class="fullH1"><%= item.get('lastName') %></h1>
+            <img id="full-avatar" src=<%= item.get('image') %>>
+            <h4 id="phone"><%= item.get('phone') %></h4>
+            <h3 id="email"><%= item.get('email') %></h3>
+            <h3 id="github"><%= item.get('github') %></h3>
+            <a href="#/students/<%= item.get('_id') %>/edit"><button class="edit">EDIT</button></a>
+        
+        </script>
 
 
         <script type="text/template" id="edit-student-template">
@@ -65,27 +75,16 @@
             <input id="github-input" value="<%= item.get('github') %>">
 
             <img id="full-avatar-edit" src=<%= item.get('image') %>>
-            
+
             <span id="imageURL">Image URL</span>
             <input id="full-avatar-url-input" value="<%= item.get('image') %>"></input>
-            <button class="save-edit-button">save</button>
+            <button class="save-edit-button">SAVE</button>
 
         </script>
 
 
 
 
-        <script type="text/template" id="full-template">
-            
-            <h1 class="fullH1"><%= item.get('firstName') %></h1>    <h1 class="fullH1"><%= item.get('lastName') %></h1>
-            <img id="full-avatar" src=<%= item.get('image') %>>
-            <h4 id="phone"><%= item.get('phone') %></h4>
-            <h3 id="email"><%= item.get('email') %></h3>
-            <h3 id="github"><%= item.get('github') %></h3>
-            <a href="#/students/<%= item.get('_id') %>/edit"><button class="edit">edit</button></a>
-        
-
-        </script>
         
         <script type="text/template" id="add-student-template">
 
